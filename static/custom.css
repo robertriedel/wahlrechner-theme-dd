@@ -43,3 +43,10 @@ body.these-icon .content::after {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media (max-width: 768px) {
+    body.these-icon .content::after {
+        height: 50px;
+        width: 50px;
+    }
+}
