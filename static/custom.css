@@ -1,14 +1,14 @@
 :root {
     --accent-color: rgb(241, 241, 228);
+    --accent-color-dark: rgb(100, 100, 100); /* Adjust this color as needed for dark mode */
+    --gradient-to-color: #e4e4e7;
+    --gradient-to-color-dark: #444444; /* Adjust this color as needed for dark mode */
 }
 
 body {
-    background-image: url("Muster_2_Streifen_RGB.jpg"), linear-gradient(to bottom, var(--tw-gradient-stops));
+    background-image: url("Muster_2_Streifen_RGB.jpg"), linear-gradient(to bottom, var(--accent-color), var(--gradient-to-color));
     background-repeat: repeat-y;
     background-size: contain;
-    --tw-gradient-from: var(--accent-color);
-    --tw-gradient-to: #e4e4e7;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 @media (prefers-color-scheme: light) {
@@ -19,18 +19,19 @@ body {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: rgb(38 38 38);
+        background-color: rgb(38, 38, 38);
     }
 
     body {
-        background-color: rgb(23 23 23);
-        background-image: none;
+        background-color: rgb(23, 23, 23);
+        background-image: url("Muster_2_Streifen_RGB.jpg"), linear-gradient(to bottom, var(--accent-color-dark), var(--gradient-to-color-dark));
     }
 }
 
 body.these-icon .content {
     position: relative;
 }
+
 body.these-icon .content::after {
     position: absolute;
     content: "";
